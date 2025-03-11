@@ -1,0 +1,6 @@
+# command = /opt/homebrew/bin/fish
+
+font-family = "MesloLGS Nerd Font"
+font-size = 14
+
+theme = "Kanagawa Wave"
