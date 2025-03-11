@@ -12,6 +12,14 @@
       # - ghostty
 
   tasks:
+  - name: Enable Fedora COPR for wezterm
+    become: yes
+    community.general.copr:
+      name: "wezfurlong/wezterm-nightly"
+      state: enabled
+    check_mode: yes
+    when: ansible_distribution == "Fedora"
+
   - name: Install packages with dnf
     become: yes
     ansible.builtin.dnf:
